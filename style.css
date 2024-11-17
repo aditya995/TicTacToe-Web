@@ -1,0 +1,61 @@
+:root {
+    --transform_x: 0%;
+    --transform_y: 52%;
+}
+.box {
+    float: left;
+}
+.cell{
+    width: 100%;
+    height: 100%;
+}
+.area {
+    max-width: 700px;
+    margin: 0 auto;
+    transform: translate( calc(-1 * var(--transform_x)), calc(-1 * var(--transform_y)));
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 5px 5px;
+    max-width: 700px;
+    margin: 50px auto; 
+    margin-bottom: 0px;
+    background-color: black;
+    transform: translate( var(--transform_x), var(--transform_y));
+}
+.line {
+    display: none;
+    position: relative;
+    width: 100%;
+    rotate: 0deg;
+    background-color: rgb(50, 50, 50);
+}
+h2 {
+    text-align: center;
+}
+.btn-rst {
+    height: 100px;
+    width: 200px;
+    font-size: 2rem;
+}
+#gameover{
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    color: #FFF;
+    background-color:rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 5rem;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
